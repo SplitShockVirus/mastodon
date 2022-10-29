@@ -1615,6 +1615,11 @@ en:
     keep_self_fav: Keep posts you favourited
     keep_self_fav_hint: Doesn't delete your own posts if you have favourited them
     min_age:
+      '86400': 1 day
+      '172800': 2 days
+      '259200': 3 days
+      '432000': 5 days
+      '604800': 1 week
       '1209600': 2 weeks
       '15778476': 6 months
       '2629746': 1 month
