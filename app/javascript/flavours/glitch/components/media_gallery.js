@@ -101,21 +101,26 @@ class Item extends React.PureComponent {
   render () {
     const { attachment, index, size, standalone, letterbox, displayWidth, visible } = this.props;
 
-    let width  = 50;
+    let width  = 100;
     let height = 100;
     let top    = 'auto';
     let left   = 'auto';
     let bottom = 'auto';
     let right  = 'auto';
 
-    if (size === 1) {
-      width = 100;
-    }
+    let root = Math.sqrt(size);
+    let numCols = Math.ceil(root);
+    let numRows = Math.ceil(size / numCols);
 
-    if (size === 4 || (size === 3 && index > 0)) {
-      height = 50;
+    let row = Math.floor(index / numCols);
+    if(row === numRows - 1) {
+      width = 100 / (1 + ((size - 1) % numCols));
+    } else {
+      width = 100 / numCols;
     }
+    height = 100 / numRows;
 
+    /*
     if (size === 2) {
       if (index === 0) {
         right = '2px';
@@ -149,6 +154,7 @@ class Item extends React.PureComponent {
         top = '2px';
       }
     }
+    */
 
     let thumbnail = '';
 
@@ -323,7 +329,7 @@ class MediaGallery extends React.PureComponent {
 
   _setDimensions () {
     const width = this.node.offsetWidth;
- 
+
     if (width && width != this.state.width) {
       // offsetWidth triggers a layout, so only calculate when we need to
       if (this.props.cacheWidth) {
@@ -344,7 +350,7 @@ class MediaGallery extends React.PureComponent {
   render () {
     const { media, intl, sensitive, letterbox, fullwidth, defaultWidth, autoplay } = this.props;
     const { visible } = this.state;
-    const size     = media.take(4).size;
+    const size     = media.take(20).size; // Attachment limit patch
     const uncached = media.every(attachment => attachment.get('type') === 'unknown');
 
     const width = this.state.width || defaultWidth;
@@ -366,7 +372,7 @@ class MediaGallery extends React.PureComponent {
     if (this.isStandaloneEligible()) {
       children = <Item standalone autoplay={autoplay} onClick={this.handleClick} attachment={media.get(0)} displayWidth={width} visible={visible} />;
     } else {
-      children = media.take(4).map((attachment, i) => <Item key={attachment.get('id')} autoplay={autoplay} onClick={this.handleClick} attachment={attachment} index={i} size={size} letterbox={letterbox} displayWidth={width} visible={visible || uncached} />);
+      children = media.take(20).map((attachment, i) => <Item key={attachment.get('id')} autoplay={autoplay} onClick={this.handleClick} attachment={attachment} index={i} size={size} letterbox={letterbox} displayWidth={width} visible={visible || uncached} />); // Attachment limit patch
     }
 
     if (uncached) {
