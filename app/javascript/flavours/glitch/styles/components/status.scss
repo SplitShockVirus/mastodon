@@ -62,9 +62,16 @@
   }
 
   .emojione {
-    width: 20px;
-    height: 20px;
-    margin: -3px 0 0;
+    width: 32px;
+    height: 32px;
+    margin: 0;
+  }
+
+  img.emojione[alt^=":sticker_"] {
+    width: 128px;
+    height: 128px;
+    display: block;
+    margin: 0 auto;
   }
 
   p, pre, blockquote {
@@ -408,7 +415,7 @@
         background: linear-gradient(rgba($ui-base-color, 0), rgba($ui-base-color, 1));
         pointer-events: none;
       }
-      
+
       a:hover {
         text-decoration: none;
       }
@@ -621,9 +628,9 @@
     line-height: 24px;
 
     .emojione {
-      width: 24px;
-      height: 24px;
-      margin: -1px 0 0;
+      width: 32px;
+      height: 32px;
+      margin: 0;
     }
   }
 

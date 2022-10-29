@@ -112,6 +112,7 @@ class Item extends React.PureComponent {
     let numCols = Math.ceil(root);
     let numRows = Math.ceil(size / numCols);
 
+    let col = index % numCols;
     let row = Math.floor(index / numCols);
     if(row === numRows - 1) {
       width = 100 / (1 + ((size - 1) % numCols));
@@ -120,47 +121,35 @@ class Item extends React.PureComponent {
     }
     height = 100 / numRows;
 
-    /*
-    if (size === 2) {
-      if (index === 0) {
+    if(numCols > 1) {
+      if(col === 0) {
         right = '2px';
+      } else if(col === numCols - 1) {
+        left = '2px';
       } else {
         left = '2px';
-      }
-    } else if (size === 3) {
-      if (index === 0) {
         right = '2px';
-      } else if (index > 0) {
-        left = '2px';
-      }
-
-      if (index === 1) {
-        bottom = '2px';
-      } else if (index > 1) {
-        top = '2px';
-      }
-    } else if (size === 4) {
-      if (index === 0 || index === 2) {
-        right = '2px';
-      }
-
-      if (index === 1 || index === 3) {
-        left = '2px';
-      }
-
-      if (index < 2) {
-        bottom = '2px';
-      } else {
-        top = '2px';
       }
     }
-    */
+
+    if(numRows > 1) {
+      if(row === 0) {
+        bottom = '2px';
+      } else if (index > 1) {
+      } else if(row === numRows - 1) {
+        top = '2px';
+      } else {
+        top = '2px';
+	bottom = '2px';
+      }
+    }
+  }
 
     let thumbnail = '';
 
     if (attachment.get('type') === 'unknown') {
       return (
-        <div className={classNames('media-gallery__item', { standalone })} key={attachment.get('id')} style={{ left: left, top: top, right: right, bottom: bottom, width: `${width}%`, height: `${height}%` }}>
+        <div className={classNames('media-gallery__item', { standalone })} key={attachment.get('id')} style={{ 'padding-left': left, 'padding-top': top, 'padding-right': right, 'padding-bottom': bottom, width: `${width}%`, height: `${height}%` }}>
           <a className='media-gallery__item-thumbnail' href={attachment.get('remote_url') || attachment.get('url')} style={{ cursor: 'pointer' }} title={attachment.get('description')} target='_blank' rel='noopener noreferrer'>
             <Blurhash
               hash={attachment.get('blurhash')}
