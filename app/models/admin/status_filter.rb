@@ -35,7 +35,7 @@ class Admin::StatusFilter
     when 'id'
       Status.where(id: value)
     else
-      raise "Unknown filter: #{key}"
+      raise Mastodon::InvalidParameterError, "Unknown filter: #{key}"
     end
   end
 end

@@ -1,7 +1,11 @@
 # frozen_string_literal: true
 
 class StatusesController < ApplicationController
+<<<<<<< HEAD
   include StatusControllerConcern
+=======
+  include WebAppControllerConcern
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
   include SignatureAuthentication
   include Authorization
   include AccountOwnedConcern

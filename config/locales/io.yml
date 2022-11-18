@@ -446,9 +446,7 @@ io:
         create: Kreez obstrukto
         hint: Domenobstrukto ne preventos kreo di kontrekordaji en datumaturo, ma retroaktive e automate aplikos partikulara jermetodi a ta konti.
         severity:
-          desc_html: "<strong>Silence</strong> will make the account's posts invisible to anyone who isn't following them. <strong>Suspend</strong> will remove all of the account's content, media, and profile data."
           noop: Nulo
-          silence: Silencigez
           suspend: Restriktez
         title: Nova domenobstrukto
       obfuscate: Nedicernebligez domennomo
@@ -668,7 +666,6 @@ io:
         other: "%{count} uzanti"
       categories:
         administration: Administro
-        devops: Developeri
         invites: Inviti
         moderation: Jero
         special: Specala
@@ -719,7 +716,6 @@ io:
         view_audit_log_description: Permisez uzanti vidar historio di administrala agi en la servilo
         view_dashboard: Videz chefpanelo
         view_dashboard_description: Permisez uzanti uzar chefpanelo e diversa opcioni
-        view_devops: Developeri
         view_devops_description: Permisez uzanti uzar chefpaneli Sidekiq e pgHero
       title: Roli
     rules:
@@ -1008,7 +1004,10 @@ io:
     warning: Sorgemez per ca informi. Ne partigez kun irgu!
     your_token: Vua acesficho
   auth:
+<<<<<<< HEAD
     apply_for_account: Demandez invito
+=======
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
     change_password: Pasvorto
     checkbox_agreement_html: Se konsentas <a href="%{rules_path}" target="_blank">servilreguli</a> e <a href="%{terms_path}" target="_blank">serveskondiconi</a>
     checkbox_agreement_without_rules_html: Me konsentar <a href="%{terms_path}" target="_blank">serveskondicioni</a>
@@ -1482,7 +1481,6 @@ io:
     browser: Vidilo
     browsers:
       alipay: Alipay
-      blackberry: Blackberry
       chrome: Chrome
       edge: Microsoft Edge
       electron: Electron
@@ -1496,7 +1494,6 @@ io:
       phantom_js: PhantomJS
       qq: Vidilo QQ
       safari: Safari
-      uc_browser: UCBrowser
       weibo: Weibo
     current_session: Nuna sesiono
     description: "%{browser} che %{platform}"
@@ -1505,8 +1502,6 @@ io:
     platforms:
       adobe_air: Adobe Air
       android: Android
-      blackberry: Blackberry
-      chrome_os: Chrome OS
       firefox_os: Firefox OS
       ios: iOS
       linux: Linux

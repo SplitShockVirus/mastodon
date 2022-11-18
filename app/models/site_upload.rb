@@ -15,7 +15,35 @@
 #
 
 class SiteUpload < ApplicationRecord
+<<<<<<< HEAD
   has_attached_file :file
+=======
+  include Attachmentable
+
+  STYLES = {
+    thumbnail: {
+      '@1x': {
+        format: 'png',
+        geometry: '1200x630#',
+        file_geometry_parser: FastGeometryParser,
+        blurhash: {
+          x_comp: 4,
+          y_comp: 4,
+        }.freeze,
+      },
+
+      '@2x': {
+        format: 'png',
+        geometry: '2400x1260#',
+        file_geometry_parser: FastGeometryParser,
+      }.freeze,
+    }.freeze,
+
+    mascot: {}.freeze,
+  }.freeze
+
+  has_attached_file :file, styles: ->(file) { STYLES[file.instance.var.to_sym] }, convert_options: { all: '-coalesce +profile "!icc,*" +set modify-date +set create-date' }, processors: [:lazy_thumbnail, :blurhash_transcoder, :type_corrector]
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
 
   validates_attachment_content_type :file, content_type: /\Aimage\/.*\z/
   validates :file, presence: true

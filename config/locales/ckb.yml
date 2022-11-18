@@ -1,6 +1,7 @@
 ---
 ckb:
   about:
+<<<<<<< HEAD
     about_hashtag_html: ئەمانە توتی گشتین بە هەشتەگی گشتی <strong>#%{hashtag}}</strong>. گەر ئێوە لە هەر ڕاژەیەک هەژمارەتان بێت دەتوانیت لێرە بەم نووسراوانە هاوئاهەنگ بن.
     about_mastodon_html: 'تۆڕی کۆمەڵایەتی داهاتوو: هیچ ڕیکلامێک ، هیچ چاودێرییەکی کۆمپانیا ، دیزاینی ئەخلاقی و لامەرکەزی! خاوەنی داتاکانت نابێ لە ماستۆدۆن!'
     about_this: دەربارە
@@ -14,6 +15,9 @@ ckb:
     browse_local_posts: گەڕانی ڕاستەوخۆ لە نووسراوە گشتیەکان لەم ڕاژەوە
     browse_public_posts: گەڕان لە جۆگەیەکی زیندووی نووسراوە گشتیەکان لەسەر ماستۆدۆن
     contact: بەردەنگ
+=======
+    about_mastodon_html: 'تۆڕی کۆمەڵایەتی داهاتوو: هیچ ڕیکلامێک، هیچ چاودێرییەکی کۆمپانیا، دیزاینی ئەخلاقی و لامەرکەزی! خاوەنی داتاکانت بە لە ماستۆدۆن!'
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
     contact_missing: سازنەکراوە
     contact_unavailable: بوونی نییە
     discover_users: پەیداکردنی بەکارهێنەران
@@ -21,6 +25,7 @@ ckb:
     federation_hint_html: بە هەژمارەیەک لەسەر %{instance} دەتوانیت شوێن خەڵک بکەویت لەسەر هەرڕاژەیەکی ماستۆدۆن.
     get_apps: ئەپێکی تەلەفۆن تاقی بکەرەوە
     hosted_on: مەستودۆن میوانداری کراوە لە %{domain}
+<<<<<<< HEAD
     instance_actor_flash: |
       ئەم هەژمارەیە ئەکتەرێکی خەیاڵی بەکارهاتووە بۆ نوێنەرایەتی کردنی خودی ڕاژەکە و نەک هیچ بەکارهێنەرێکی تاک.
       بۆ مەبەستی فیدراسیۆن بەکاردێت و نابێت بلۆک بکرێت مەگەر دەتەوێت هەموو نمونەکە بلۆک بکەیت، کە لە حاڵەتەش دا پێویستە بلۆکی دۆمەین بەکاربهێنیت.
@@ -52,6 +57,9 @@ ckb:
       other: بەکارهێنەران
     user_count_before: "`خاوەن"
     what_is_mastodon: ماستۆدۆن چییە?
+=======
+    title: دەربارە
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
   accounts:
     choices_html: 'هەڵبژاردنەکانی %{name}:'
     endorsements_hint: دەتوانیت ئەو کەسانە پەسەند بکەیت کە پەیڕەویان دەکەیت لە ڕووکاری وێب، و ئەوان لێرە دەردەکەون.
@@ -99,11 +107,17 @@ ckb:
       avatar: وێنۆچکە
       by_domain: دۆمەین
       change_email:
+        changed_msg: ئیمەیڵ بەسەرکەوتوویی گۆڕدرا!
         current_email: ئیمەیلی ئێستا
         label: گۆڕینی ئیمێڵ
         new_email: ئیمەیڵی نوێ
         submit: گۆڕینی ئیمێڵ
         title: گۆڕینی ئیمەیڵ بۆ %{username}
+      change_role:
+        changed_msg: ڕۆڵ بەسەرکەوتوویی گۆڕدرا!
+        label: گۆڕینی ڕۆڵ
+        no_role: ڕۆڵ نیە
+        title: ڕۆڵی %{username} بگۆڕە
       confirm: پشتڕاستی بکەوە
       confirmed: پشتڕاست کرا
       confirming: پشتڕاستکردنەوە
@@ -130,7 +144,7 @@ ckb:
       header: سەرپەڕە
       inbox_url: نیشانی هاتنەژوور
       invite_request_text: هۆکارەکانی بەشداریکردن
-      invited_by: هاتۆتە ژورەوە لە لایەن
+      invited_by: بانگهێشتکراو لە لایەن
       ip: ئای‌پی
       joined: ئەندام بوو لە
       location:
@@ -147,6 +161,7 @@ ckb:
         active: چالاک
         all: هەموو
         pending: چاوەڕوان
+        silenced: سنووردار
         suspended: ڕاگرتن
         title: بەڕێوەبردن
       moderation_notes: بەڕێوەبردنی تێبینیەکان
@@ -154,6 +169,7 @@ ckb:
       most_recent_ip: نوێترین ئای پی
       no_account_selected: هیچ هەژمارەیەک نەگۆڕاوە وەک ئەوەی هیچ یەکێک دیاری نەکراوە
       no_limits_imposed: هیچ سنوورێک نەسەپێنرا
+      no_role_assigned: ڕۆڵ دیاری نەکراوە
       not_subscribed: بەشدار نەبوو
       pending: پێداچوونەوەی چاوەڕوان
       perform_full_suspension: ڕاگرتن
@@ -177,6 +193,7 @@ ckb:
       reset: ڕێکخستنەوە
       reset_password: گەڕانەوەی تێپەڕوشە
       resubscribe: دووبارە ئابونەبوون
+      role: ڕۆڵ
       search: گەڕان
       search_same_email_domain: بەکارهێنەرانی دیکە بە ئیمەیلی یەکسان
       search_same_ip: بەکارهێنەرانی تر بەهەمان ئای پی
@@ -193,10 +210,13 @@ ckb:
       silenced: سنوورکرا
       statuses: دۆخەکان
       subscribe: ئابوونە
+      suspend: ڕاگرتن
       suspended: ڕاگرتن
       suspension_irreversible: داتای ئەم هەژمارەیە بە شێوەیەکی نائاسایی سڕاوەتەوە. دەتوانیت هەژمارەکەت ڕابخەیت بۆ ئەوەی بەکاربێت بەڵام هیچ داتایەک ناگەڕگەڕێتەوە کە پێشتر بوونی بوو.
       suspension_reversible_hint_html: هەژمارە ڕاگیرا ، و داتاکە بەتەواوی لە %{date} لادەبرێت. تا ئەو کاتە هەژمارەکە دەتوانرێت بە بێ هیچ کاریگەریەکی خراپ بژمێردرێتەوە. ئەگەر دەتەوێت هەموو داتاکانی هەژمارەکە بسڕەوە، دەتوانیت لە خوارەوە ئەمە بکەیت.
       title: هەژمارەکان
+      unblock_email: کردنەوەی ئیمەیڵ
+      unblocked_email_msg: بەسەرکەوتوویی ئیمەیڵی %{username} کرایەوە
       unconfirmed_email: ئیمەیڵی پشتڕاستنەکراو
       undo_sensitized: " هەستیار نەکردن"
       undo_silenced: بێدەنگ ببە
@@ -215,17 +235,21 @@ ckb:
         approve_user: پەسەندکردنی بەکارهێنەر
         assigned_to_self_report: تەرخانکردنی گوزارشت
         change_email_user: گۆڕینی ئیمەیڵ بۆ بەکارهێنەر
+        change_role_user: گۆڕینی ڕۆڵی بەکارهێنەر
         confirm_user: دڵنیابوون لە بەکارهێنەر
         create_account_warning: دروستکردنی ئاگاداری
         create_announcement: دروستکردنی راگەیەندراو
+        create_canonical_email_block: دروستکردنی بلۆککردنی ئیمەیڵ
         create_custom_emoji: دروستکردنی ئێمۆمۆجی دڵخواز
         create_domain_allow: دروستکردنی ڕێپێدان بە دۆمەین
         create_domain_block: دروستکردنی بلۆکی دۆمەین
         create_email_domain_block: دروستکردنی بلۆکی دۆمەینی ئیمەیڵ
         create_ip_block: دروستکردنی یاسای IP
         create_unavailable_domain: دروستکردنی دۆمەینی بەردەست نییە
+        create_user_role: دروستکردنی پلە
         demote_user: دابەزاندنی ئاستی بەکارهێنەر
         destroy_announcement: سڕینەوەی راگەیەندراو
+        destroy_canonical_email_block: سڕینەوەی بلۆکی ئیمەیڵ
         destroy_custom_emoji: سڕینەوەی ئێمۆمۆجی تایبەتمەند
         destroy_domain_allow: سڕینەوەی ڕێپێدان بە دۆمەین
         destroy_domain_block: سڕینەوەی بلۆکی دۆمەین
@@ -234,6 +258,7 @@ ckb:
         destroy_ip_block: سڕینەوەی یاسای IP
         destroy_status: دۆخ بسڕەوە
         destroy_unavailable_domain: دۆمەینی بەردەست نییە بسڕەوە
+        destroy_user_role: لەناوبردنی پلە
         disable_2fa_user: لەکارخستنی 2FA
         disable_custom_emoji: سڕینەوەی ئێمۆمۆجی تایبەتمەند
         disable_sign_in_token_auth_user: ڕەسەنایەتی نیشانەی ئیمەیڵ بۆ بەکارهێنەر لەکاربخە
@@ -247,6 +272,7 @@ ckb:
         reject_user: بەکارهێنەر ڕەت بکەرەوە
         remove_avatar_user: لابردنی وێنۆجکە
         reopen_report: دووبارە کردنەوەی گوزارشت
+        resend_user: دووبارە ناردنی ئیمەیڵی پشتڕاستکردنەوە
         reset_password_user: گەڕانەوەی تێپەڕوشە
         resolve_report: گوزارشت چارەسەربکە
         sensitive_account: میدیاکە لە هەژمارەکەت وەک هەستیار نیشانە بکە
@@ -260,7 +286,9 @@ ckb:
         update_announcement: بەڕۆژکردنەوەی راگەیەندراو
         update_custom_emoji: بەڕۆژکردنی ئێمۆمۆجی دڵخواز
         update_domain_block: نوێکردنەوەی بلۆکی دۆمەین
+        update_ip_block: نوێکردنەوەی یاسای IP
         update_status: بەڕۆژکردنی دۆخ
+        update_user_role: نوێکردنەوەی پلە
       actions:
         update_status_html: "%{name} پۆستی نوێکراوە لەلایەن %{target}"
       empty: هیچ لاگی کارنەدۆزرایەوە.
@@ -351,9 +379,7 @@ ckb:
         create: دروستکردنی بلۆک
         hint: بلۆکی دۆمەین رێگری لە دروستکردنی هەژمارەی چوونەژوورەوە لە بنکەی زانیارێکان ناکات ، بەڵکو بە شێوەیەکی دووبارە و خۆکارانە رێوشێوازی پێشکەوتوو تایبەت لەسەر ئەو هەژمارانە جێبەجێ دەکات.
         severity:
-          desc_html: "<strong> بێدەنگی</strong> وا دەکات کە نووسراوەکانی هەژمارەکان نەبینراوە بێت بۆ هەر کەسێک کە شوێنیان نەکەوێ. <strong>ڕاگرتنی</strong> هەموو ناوەڕۆکی هەژمارەکە، میدیا، و داتای پرۆفایلەکەی بەکارهێنان. <strong>هیچ </strong> ئەگەر دەتەوێت فایلەکانی میدیا ڕەت بکەیتەوە."
           noop: هیچ
-          silence: بێدەنگ
           suspend: ڕاگرتن
         title: بلۆکی دۆمەینی نوێ
       obfuscate: ناوی دۆمەینەکە تەمومژاوی بکە
@@ -911,7 +937,7 @@ ckb:
       '86400': ١ ڕۆژ
     expires_in_prompt: هەرگیز
     generate: دروستکردنی لینکی بانگهێشت
-    invited_by: 'بانگهێشتکرایت لەلایەن:'
+    invited_by: 'بانگهێشت کراویت لەلایەن:'
     max_uses:
       one: ١ بار
       other: "%{count} بار"
@@ -1067,7 +1093,6 @@ ckb:
     activity: دوایین چالاکی
     browser: وێبگەڕ
     browsers:
-      blackberry: بلاکبێری
       chrome: کرۆم
       edge: مایکرۆسۆفت ئیچ
       electron: ئەلکترۆن
@@ -1081,15 +1106,12 @@ ckb:
       phantom_js: فانتۆم جەی ئێس
       qq: وێبگەڕی QQ
       safari: سافری
-      uc_browser: وێبگەڕی UC
     current_session: دانیشتنی ئێستا
     description: "%{browser} لەسەر %{platform}"
     explanation: ئەمانە وێبگەڕەکەن کە ئێستا چووەتە ژوورەوە بۆ ئەژمێری ماستۆدۆنی خۆت.
     ip: ئای‌پی
     platforms:
       android: ئەندرۆید
-      blackberry: بلاکبێری
-      chrome_os: سیستەمی کارگێڕی کرۆم
       firefox_os: سیستەمی کارگێڕی فایەرفۆکس
       linux: لینۆکس
       mac: ماک

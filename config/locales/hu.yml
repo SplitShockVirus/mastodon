@@ -273,6 +273,7 @@ hu:
         reject_user: Felhasználó Elutasítása
         remove_avatar_user: Profilkép eltávolítása
         reopen_report: Jelentés újranyitása
+        resend_user: Megerősítő e-mail újraküldése
         reset_password_user: Jelszó visszaállítása
         resolve_report: Jelentés megoldása
         sensitive_account: A fiókodban minden média kényesnek jelölése
@@ -331,6 +332,7 @@ hu:
         reject_user_html: "%{name} elutasította %{target} regisztrációját"
         remove_avatar_user_html: "%{name} törölte %{target} profilképét"
         reopen_report_html: "%{name} újranyitotta a %{target} bejelentést"
+        resend_user_html: "%{name} újraküldte %{target} megerősítő e-mailjét"
         reset_password_user_html: "%{name} visszaállította %{target} felhasználó jelszavát"
         resolve_report_html: "%{name} megoldotta a %{target} bejelentést"
         sensitive_account_html: "%{name} kényesnek jelölte %{target} médiatartalmát"
@@ -347,6 +349,7 @@ hu:
         update_ip_block_html: "%{name} módosította a(z) %{target} IP-címre vonatkozó szabályt"
         update_status_html: "%{name} frissítette %{target} felhasználó bejegyzését"
         update_user_role_html: "%{name} módosította a(z) %{target} szerepkört"
+      deleted_account: törölt fiók
       empty: Nem található napló.
       filter_by_action: Szűrés művelet alapján
       filter_by_user: Szűrés felhasználó alapján
@@ -448,9 +451,7 @@ hu:
         create: Tiltás létrehozása
         hint: A domain tiltása nem gátolja meg az új fiókok hozzáadását az abatbázishoz, de visszamenőlegesen és automatikusan aktivál bizonyos moderációs szabályokat ezen fiókok esetében.
         severity:
-          desc_html: A <strong>Némítás</strong> elrejti az adott felhasználó bejegyzéseit mindenki elől, aki nem követi őt. A <strong>Felfüggesztés</strong> eltávolítja az adott felhasználó által létrehozott minden tartalmat, ide értve a médiafájlokat és a fiókadatokat is. Válaszd az <strong>Egyik sem</strong> opciót, ha csupán a médiafájlokat szeretnéd elutasítani.
           noop: Egyik sem
-          silence: Némítás
           suspend: Felfüggesztés
         title: Új domain tiltása
       obfuscate: Domain név álcázása
@@ -670,7 +671,7 @@ hu:
         other: "%{count} felhasználó"
       categories:
         administration: Adminisztráció
-        devops: Devops
+        devops: DevOps
         invites: Meghívások
         moderation: Moderáció
         special: Speciális
@@ -721,7 +722,7 @@ hu:
         view_audit_log_description: Lehetővé teszi, hogy a felhasználó megtekintse a kiszolgáló adminisztratív eseményeinek történetét
         view_dashboard: Irányítópult megtekintése
         view_dashboard_description: Lehetővé teszi, hogy a felhasználó elérje az irányítópultot és vele számos metrikát
-        view_devops: Devops
+        view_devops: DevOps
         view_devops_description: Lehetővé teszi, hogy a felhasználó elérje a Sidekiq és pgHero irányítópultjait
       title: Szerepek
     rules:
@@ -732,6 +733,7 @@ hu:
       empty: Nincsenek még szerver szabályok definiálva.
       title: Szerverszabályzat
     settings:
+<<<<<<< HEAD
       activity_api_enabled:
         desc_html: Helyi bejegyzések, aktív felhasználók és új regisztrációk száma heti bontásban
         title: Felhasználói aktivitás összesített statisztikájának publikussá tétele
@@ -747,6 +749,29 @@ hu:
       default_noindex:
         desc_html: Olyan felhasználókat érinti, akik nem módosították ezt a beállítást
         title: Alapértelmezésként ne indexeljék a keresők a felhasználóinkat
+=======
+      about:
+        manage_rules: Kiszolgáló szabályainak kezelése
+        preamble: Adj meg részletes információkat arról, hogy a kiszolgáló hogyan működik, miként moderálják és finanszírozzák.
+        rules_hint: Van egy helyünk a szabályoknak, melyeket a felhasználóidnak be kellene tartani.
+        title: Névjegy
+      appearance:
+        preamble: A Mastodon webes felületének testreszabása.
+        title: Megjelenés
+      branding:
+        preamble: A kiszolgáló márkajelzése különbözteti meg a hálózat többi kiszolgálójától. Ez az információ számos környezetben megjelenhet, például a Mastodon webes felületén, natív alkalmazásokban, más weboldalakon és üzenetküldő alkalmazásokban megjelenő hivatkozások előnézetben stb. Ezért a legjobb, ha ez az információ világos, rövid és tömör.
+        title: Branding
+      content_retention:
+        preamble: Felhasználók által generált tartalom Mastodonon való tárolásának szabályozása.
+        title: Tartalom megtartása
+      discovery:
+        follow_recommendations: Ajánlottak követése
+        preamble: Az érdekes tartalmak felszínre hozása fontos szerepet játszik az új felhasználók bevonásában, akik esetleg nem ismerik a Mastodont. Szabályozd, hogy a különböző felfedezési funkciók hogyan működjenek a kiszolgálón.
+        profile_directory: Profiladatbázis
+        public_timelines: Nyilvános idővonalak
+        title: Felfedezés
+        trends: Trendek
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
       domain_blocks:
         all: Mindenkinek
         disabled: Senkinek
@@ -1010,7 +1035,10 @@ hu:
     warning: Ez érzékeny adat. Soha ne oszd meg másokkal!
     your_token: Hozzáférési kulcsod
   auth:
+<<<<<<< HEAD
     apply_for_account: Meghívó kérése
+=======
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
     change_password: Jelszó
     checkbox_agreement_html: Egyetértek a <a href="%{rules_path}" target="_blank">szerver szabályaival</a> és a <a href="%{terms_path}" target="_blank">felhasználási feltételekkel</a>
     checkbox_agreement_without_rules_html: Egyetértek a <a href="%{terms_path}" target="_blank">felhasználási feltételekkel</a>
@@ -1352,6 +1380,8 @@ hu:
     carry_blocks_over_text: Ez a fiók elköltözött innen %{acct}, melyet letiltottatok.
     carry_mutes_over_text: Ez a fiók elköltözött innen %{acct}, melyet lenémítottatok.
     copy_account_note_text: 'Ez a fiók elköltözött innen %{acct}, itt vannak a bejegyzéseitek róla:'
+  navigation:
+    toggle_menu: Menü be/ki
   notification_mailer:
     admin:
       report:
@@ -1484,7 +1514,7 @@ hu:
     browser: Böngésző
     browsers:
       alipay: Alipay
-      blackberry: Blackberry
+      blackberry: BlackBerry
       chrome: Chrome
       edge: Microsoft Edge
       electron: Electron
@@ -1498,7 +1528,7 @@ hu:
       phantom_js: PhantomJS
       qq: QQ Browser
       safari: Safari
-      uc_browser: UCBrowser
+      uc_browser: UC Browser
       weibo: Weibo
     current_session: Jelenlegi munkamenet
     description: "%{browser} az alábbi platformon: %{platform}"
@@ -1507,7 +1537,7 @@ hu:
     platforms:
       adobe_air: Adobe Air
       android: Android
-      blackberry: Blackberry
+      blackberry: BlackBerry
       chrome_os: ChromeOS
       firefox_os: Firefox OS
       ios: iOS

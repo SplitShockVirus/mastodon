@@ -1,4 +1,19 @@
 {
+<<<<<<< HEAD
+=======
+  "about.blocks": "Moderované servery",
+  "about.contact": "Kontakt:",
+  "about.disclaimer": "Mastodon je svobodný software s otevřeným zdrojovým kódem a ochranná známka společnosti Mastodon gGmbH.",
+  "about.domain_blocks.no_reason_available": "Důvod není k dispozici",
+  "about.domain_blocks.preamble": "Mastodon umožňuje prohlížet obsah a komunikovat s uživateli jakéhokoliv serveru ve fediversu. Pro tento konkrétní server se vztahují následující výjimky.",
+  "about.domain_blocks.silenced.explanation": "Uživatele a obsah tohoto serveru neuvidíte, pokud je nebudete výslovně hledat nebo je nezačnete sledovat.",
+  "about.domain_blocks.silenced.title": "Omezeno",
+  "about.domain_blocks.suspended.explanation": "Žádná data z tohoto serveru nebudou zpracovávána, uložena ani vyměňována, což znemožňuje jakoukoli interakci nebo komunikaci s uživateli z tohoto serveru.",
+  "about.domain_blocks.suspended.title": "Pozastaveno",
+  "about.not_available": "Tato informace nebyla zpřístupněna na tomto serveru.",
+  "about.powered_by": "Decentralizovaná sociální média poháněná {mastodon}",
+  "about.rules": "Pravidla serveru",
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
   "account.account_note_header": "Poznámka",
   "account.add_or_remove_from_list": "Přidat nebo odstranit ze seznamů",
   "account.badges.bot": "Robot",
@@ -7,7 +22,11 @@
   "account.block_domain": "Blokovat doménu {domain}",
   "account.blocked": "Blokován",
   "account.browse_more_on_origin_server": "Více na původním profilu",
+<<<<<<< HEAD
   "account.cancel_follow_request": "Zrušit žádost o sledování",
+=======
+  "account.cancel_follow_request": "Odvolat žádost o sledování",
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
   "account.direct": "Poslat @{name} přímou zprávu",
   "account.disable_notifications": "Zrušit upozorňování na příspěvky @{name}",
   "account.domain_blocked": "Doména blokována",
@@ -22,17 +41,23 @@
   "account.following_counter": "{count, plural, one {{counter} Sledovaný} few {{counter} Sledovaní} many {{counter} Sledovaných} other {{counter} Sledovaných}}",
   "account.follows.empty": "Tento uživatel ještě nikoho nesleduje.",
   "account.follows_you": "Sleduje vás",
+  "account.go_to_profile": "Přejít na profil",
   "account.hide_reblogs": "Skrýt boosty od @{name}",
+<<<<<<< HEAD
   "account.joined": "Založen {date}",
+=======
+  "account.joined_short": "Připojen/a",
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
   "account.languages": "Změnit odebírané jazyky",
   "account.link_verified_on": "Vlastnictví tohoto odkazu bylo zkontrolováno {date}",
   "account.locked_info": "Stav soukromí tohoto účtu je nastaven na zamčeno. Jeho vlastník ručně posuzuje, kdo ho může sledovat.",
   "account.media": "Média",
   "account.mention": "Zmínit @{name}",
-  "account.moved_to": "Uživatel {name} se přesunul na:",
+  "account.moved_to": "{name} uvedl/a, že jeho/její nový účet je nyní:",
   "account.mute": "Skrýt @{name}",
   "account.mute_notifications": "Skrýt oznámení od @{name}",
   "account.muted": "Skryt",
+  "account.open_original_page": "Otevřít původní stránku",
   "account.posts": "Příspěvky",
   "account.posts_with_replies": "Příspěvky a odpovědi",
   "account.report": "Nahlásit @{name}",
@@ -54,7 +79,7 @@
   "admin.dashboard.retention.average": "Průměr",
   "admin.dashboard.retention.cohort": "Měsíc registrace",
   "admin.dashboard.retention.cohort_size": "Noví uživatelé",
-  "alert.rate_limited.message": "Zkuste to prosím znovu za {retry_time, time, medium}.",
+  "alert.rate_limited.message": "Zkuste to prosím znovu po {retry_time, time, medium}.",
   "alert.rate_limited.title": "Spojení omezena",
   "alert.unexpected.message": "Objevila se neočekávaná chyba.",
   "alert.unexpected.title": "Jejda!",
@@ -69,6 +94,15 @@
   "bundle_modal_error.close": "Zavřít",
   "bundle_modal_error.message": "Při načítání této komponenty se něco pokazilo.",
   "bundle_modal_error.retry": "Zkusit znovu",
+<<<<<<< HEAD
+=======
+  "closed_registrations.other_server_instructions": "Protože je Mastodon decentralizovaný, můžete si vytvořit účet na jiném serveru a stále s tímto serverem komunikovat.",
+  "closed_registrations_modal.description": "V současné době není možné vytvořit účet na {domain} ale mějte prosím na paměti, že k používání Mastodonu nepotřebujete účet konkrétně na {domain}.",
+  "closed_registrations_modal.find_another_server": "Najít jiný server",
+  "closed_registrations_modal.preamble": "Mastodon je decentralizovaný, takže bez ohledu na to, kde vytvoříte svůj účet, budete moci sledovat a komunikovat s kýmkoli na tomto serveru. Můžete ho dokonce hostit!",
+  "closed_registrations_modal.title": "Registrace na Mastodonu",
+  "column.about": "O aplikaci",
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
   "column.blocks": "Blokovaní uživatelé",
   "column.bookmarks": "Záložky",
   "column.community": "Místní časová osa",
@@ -109,6 +143,7 @@
   "compose_form.poll.switch_to_multiple": "Povolit u ankety výběr více možností",
   "compose_form.poll.switch_to_single": "Povolit u ankety výběr jediné možnosti",
   "compose_form.publish": "Zveřejnit",
+  "compose_form.publish_form": "Publish",
   "compose_form.publish_loud": "{publish}!",
   "compose_form.save_changes": "Uložit změny",
   "compose_form.sensitive.hide": "{count, plural, one {Označit média za citlivá} few {Označit média za citlivá} many {Označit média za citlivá} other {Označit média za citlivá}}",
@@ -121,6 +156,11 @@
   "confirmations.block.block_and_report": "Blokovat a nahlásit",
   "confirmations.block.confirm": "Blokovat",
   "confirmations.block.message": "Opravdu chcete zablokovat {name}?",
+<<<<<<< HEAD
+=======
+  "confirmations.cancel_follow_request.confirm": "Odvolat žádost",
+  "confirmations.cancel_follow_request.message": "Opravdu chcete odvolat svou žádost o sledování {name}?",
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
   "confirmations.delete.confirm": "Smazat",
   "confirmations.delete.message": "Opravdu chcete smazat tento příspěvek?",
   "confirmations.delete_list.confirm": "Smazat",
@@ -148,6 +188,17 @@
   "directory.local": "Pouze z domény {domain}",
   "directory.new_arrivals": "Nově příchozí",
   "directory.recently_active": "Nedávno aktivní",
+<<<<<<< HEAD
+=======
+  "disabled_account_banner.account_settings": "Nastavení účtu",
+  "disabled_account_banner.text": "Váš účet {disabledAccount} je momentálně zakázán.",
+  "dismissable_banner.community_timeline": "Toto jsou nejnovější veřejné příspěvky od lidí, jejichž účty hostuje {domain}.",
+  "dismissable_banner.dismiss": "Odmítnout",
+  "dismissable_banner.explore_links": "O těchto novinkách hovoří lidé na tomto a dalších serverech decentralizované sítě.",
+  "dismissable_banner.explore_statuses": "Tyto příspěvky z této a dalších serverů v decentralizované síti nyní získávají trakci na tomto serveru.",
+  "dismissable_banner.explore_tags": "Tyto hashtagy právě teď získávají na popularitě mezi lidmi na tomto a dalších serverech decentralizované sítě.",
+  "dismissable_banner.public_timeline": "Toto jsou nejnovější veřejné příspěvky od lidí na tomto a jiných serverech decentralizované sítě, o které tento server ví.",
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
   "embed.instructions": "Pro přidání příspěvku na vaši webovou stránku zkopírujte níže uvedený kód.",
   "embed.preview": "Takhle to bude vypadat:",
   "emoji_button.activity": "Aktivita",
@@ -193,11 +244,7 @@
   "errors.unexpected_crash.copy_stacktrace": "Zkopírovat stacktrace do schránky",
   "errors.unexpected_crash.report_issue": "Nahlásit problém",
   "explore.search_results": "Výsledky hledání",
-  "explore.suggested_follows": "Pro vás",
   "explore.title": "Objevování",
-  "explore.trending_links": "Zprávy",
-  "explore.trending_statuses": "Příspěvky",
-  "explore.trending_tags": "Hashtagy",
   "filter_modal.added.context_mismatch_explanation": "Tato kategorie filtru se nevztahuje na kontext, ve kterém jste tento příspěvek otevřeli. Pokud chcete, aby byl příspěvek filtrován i v tomto kontextu, budete muset filtr upravit.",
   "filter_modal.added.context_mismatch_title": "Kontext se neshoduje!",
   "filter_modal.added.expired_explanation": "Tato kategorie filtrů vypršela, budete muset změnit datum vypršení platnosti, aby mohla být použita.",
@@ -220,7 +267,15 @@
   "follow_request.authorize": "Autorizovat",
   "follow_request.reject": "Odmítnout",
   "follow_requests.unlocked_explanation": "Přestože váš účet není uzamčen, personál {domain} usoudil, že byste mohli chtít tyto požadavky na sledování zkontrolovat ručně.",
+  "footer.about": "O aplikaci",
+  "footer.directory": "Adresář profilů",
+  "footer.get_app": "Stáhnout aplikaci",
+  "footer.invite": "Pozvat lidi",
+  "footer.keyboard_shortcuts": "Klávesové zkratky",
+  "footer.privacy_policy": "Zásady ochrany osobních údajů",
+  "footer.source_code": "Zobrazit zdrojový kód",
   "generic.saved": "Uloženo",
+<<<<<<< HEAD
   "getting_started.developers": "Vývojáři",
   "getting_started.directory": "Adresář profilů",
   "getting_started.documentation": "Dokumentace",
@@ -229,6 +284,9 @@
   "getting_started.open_source_notice": "Mastodon je otevřený software. Přispět do jeho vývoje nebo hlásit chyby můžete na GitHubu {github}.",
   "getting_started.privacy_policy": "Zásady ochrany osobních údajů",
   "getting_started.security": "Nastavení účtu",
+=======
+  "getting_started.heading": "Začínáme",
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
   "hashtag.column_header.tag_mode.all": "a {additional}",
   "hashtag.column_header.tag_mode.any": "nebo {additional}",
   "hashtag.column_header.tag_mode.none": "bez {additional}",
@@ -245,6 +303,21 @@
   "home.column_settings.show_replies": "Zobrazit odpovědi",
   "home.hide_announcements": "Skrýt oznámení",
   "home.show_announcements": "Zobrazit oznámení",
+<<<<<<< HEAD
+=======
+  "interaction_modal.description.favourite": "Pokud máte účet na Mastodonu, můžete tento příspěvek označit jako oblíbený a dát tak autorovi najevo, že si ho vážíte, a uložit si ho na později.",
+  "interaction_modal.description.follow": "S účtem na Mastodonu můžete sledovat {name} a přijímat příspěvky ve vašem domovském kanálu.",
+  "interaction_modal.description.reblog": "S účtem na Mastodonu můžete podpořit tento příspěvek a sdílet jej s vlastními sledujícími.",
+  "interaction_modal.description.reply": "S účtem na Mastodonu můžete reagovat na tento příspěvek.",
+  "interaction_modal.on_another_server": "Na jiném serveru",
+  "interaction_modal.on_this_server": "Na tomto serveru",
+  "interaction_modal.other_server_instructions": "Zkopírujte a vložte tuto URL do vyhledávacího pole vaší oblíbené Mastodon aplikace nebo webového rozhraní vašeho Mastodon serveru.",
+  "interaction_modal.preamble": "Protože je Mastodon decentralizovaný, pokud nemáte účet na tomto serveru, můžete použít svůj existující účet hostovaný jiným Mastodon serverem nebo kompatibilní platformou.",
+  "interaction_modal.title.favourite": "Oblíbený příspěvek {name}",
+  "interaction_modal.title.follow": "Sledovat {name}",
+  "interaction_modal.title.reblog": "Zvýšit příspěvek uživatele {name}",
+  "interaction_modal.title.reply": "Odpovědět na příspěvek uživatele {name}",
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
   "intervals.full.days": "{number, plural, one {# den} few {# dny} many {# dní} other {# dní}}",
   "intervals.full.hours": "{number, plural, one {# hodina} few {# hodiny} many {# hodin} other {# hodin}}",
   "intervals.full.minutes": "{number, plural, one {# minuta} few {# minuty} many {# minut} other {# minut}}",
@@ -288,7 +361,7 @@
   "lightbox.next": "Další",
   "lightbox.previous": "Předchozí",
   "limited_account_hint.action": "Přesto profil zobrazit",
-  "limited_account_hint.title": "Tento profil byl skryt moderátory vašeho serveru.",
+  "limited_account_hint.title": "Tento profil byl skryt moderátory {domain}.",
   "lists.account.add": "Přidat do seznamu",
   "lists.account.remove": "Odebrat ze seznamu",
   "lists.delete": "Smazat seznam",
@@ -307,10 +380,15 @@
   "media_gallery.toggle_visible": "{number, plural, one {Skrýt obrázek} few {Skrýt obrázky} many {Skrýt obrázky} other {Skrýt obrázky}}",
   "missing_indicator.label": "Nenalezeno",
   "missing_indicator.sublabel": "Tento zdroj se nepodařilo najít",
+  "moved_to_account_banner.text": "Váš účet {disabledAccount} je momentálně zakázán, protože jste se přesunul/a na {movedToAccount}.",
   "mute_modal.duration": "Trvání",
   "mute_modal.hide_notifications": "Skrýt oznámení od tohoto uživatele?",
   "mute_modal.indefinite": "Neomezeně",
+<<<<<<< HEAD
   "navigation_bar.apps": "Mobilní aplikace",
+=======
+  "navigation_bar.about": "O aplikaci",
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
   "navigation_bar.blocks": "Blokovaní uživatelé",
   "navigation_bar.bookmarks": "Záložky",
   "navigation_bar.community_timeline": "Místní časová osa",
@@ -324,8 +402,11 @@
   "navigation_bar.filters": "Skrytá slova",
   "navigation_bar.follow_requests": "Žádosti o sledování",
   "navigation_bar.follows_and_followers": "Sledovaní a sledující",
+<<<<<<< HEAD
   "navigation_bar.info": "O tomto serveru",
   "navigation_bar.keyboard_shortcuts": "Klávesové zkratky",
+=======
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
   "navigation_bar.lists": "Seznamy",
   "navigation_bar.logout": "Odhlásit",
   "navigation_bar.mutes": "Skrytí uživatelé",
@@ -333,6 +414,10 @@
   "navigation_bar.pins": "Připnuté příspěvky",
   "navigation_bar.preferences": "Předvolby",
   "navigation_bar.public_timeline": "Federovaná časová osa",
+<<<<<<< HEAD
+=======
+  "navigation_bar.search": "Hledat",
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
   "navigation_bar.security": "Zabezpečení",
   "notification.admin.report": "Uživatel {name} nahlásil {target}",
   "notification.admin.sign_up": "Uživatel {name} se zaregistroval",
@@ -459,6 +544,7 @@
   "report_notification.categories.violation": "Porušení pravidla",
   "report_notification.open": "Otevřít hlášení",
   "search.placeholder": "Hledat",
+  "search.search_or_paste": "Hledat nebo vložit URL",
   "search_popout.search_format": "Pokročilé hledání",
   "search_popout.tips.full_text": "Jednoduchý text vrací příspěvky, které jste napsali, oblíbili si, boostnuli, nebo vás v nich někdo zmínil, a také odpovídající přezdívky, zobrazovaná jména a hashtagy.",
   "search_popout.tips.hashtag": "hashtag",
@@ -512,6 +598,10 @@
   "status.reblogs.empty": "Tento příspěvek ještě nikdo neboostnul. Pokud to někdo udělá, zobrazí se zde.",
   "status.redraft": "Smazat a přepsat",
   "status.remove_bookmark": "Odstranit ze záložek",
+<<<<<<< HEAD
+=======
+  "status.replied_to": "Odpověděl uživateli {name}",
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
   "status.reply": "Odpovědět",
   "status.replyAll": "Odpovědět na vlákno",
   "status.report": "Nahlásit @{name}",
@@ -525,7 +615,11 @@
   "status.show_original": "Zobrazit původní",
   "status.show_thread": "Zobrazit vlákno",
   "status.translate": "Přeložit",
+<<<<<<< HEAD
   "status.translated_from": "Přeloženo z {lang}",
+=======
+  "status.translated_from_with": "Přeloženo z {lang} pomocí {provider}",
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
   "status.uncached_media_warning": "Nedostupné",
   "status.unmute_conversation": "Odkrýt konverzaci",
   "status.unpin": "Odepnout z profilu",
@@ -548,7 +642,7 @@
   "timeline_hint.resources.followers": "Sledující",
   "timeline_hint.resources.follows": "Sledovaní",
   "timeline_hint.resources.statuses": "Starší příspěvky",
-  "trends.counter_by_accounts": "{count, plural, one {{counter} person} other {{counter} people}} in the past {days, plural, one {day} other {{days} days}}",
+  "trends.counter_by_accounts": "{count, plural, one {{counter} člověk} few {{counter} lidé} many {{counter} lidí} other {{counter} lidí}} za poslední {days, plural, one {den} few {{days} dny} many {{days} dnů} other {{days} dnů}}",
   "trends.trending_now": "Právě populární",
   "ui.beforeunload": "Pokud Mastodon opustíte, váš koncept se ztratí.",
   "units.short.billion": "{count} mld.",
@@ -576,6 +670,7 @@
   "upload_modal.preparing_ocr": "Příprava OCR…",
   "upload_modal.preview_label": "Náhled ({ratio})",
   "upload_progress.label": "Nahrávání…",
+  "upload_progress.processing": "Zpracovávání…",
   "video.close": "Zavřít video",
   "video.download": "Stáhnout soubor",
   "video.exit_fullscreen": "Ukončit režim celé obrazovky",

@@ -211,7 +211,7 @@ module ApplicationHelper
     permit_visibilities.shift(permit_visibilities.index(default_privacy) + 1) if default_privacy.present?
     state_params[:visibility] = params[:visibility] if permit_visibilities.include? params[:visibility]
 
-    if user_signed_in?
+    if user_signed_in? && current_user.functional?
       state_params[:settings]          = state_params[:settings].merge(Web::Setting.find_by(user: current_user)&.data || {})
       state_params[:push_subscription] = current_account.user.web_push_subscription(current_session)
       state_params[:current_account]   = current_account
@@ -219,6 +219,18 @@ module ApplicationHelper
       state_params[:admin]             = Account.find_local(Setting.site_contact_username.strip.gsub(/\A@/, ''))
     end
 
+<<<<<<< HEAD
+=======
+    if user_signed_in? && !current_user.functional?
+      state_params[:disabled_account] = current_account
+      state_params[:moved_to_account] = current_account.moved_to_account
+    end
+
+    if single_user_mode?
+      state_params[:owner] = Account.local.without_suspended.where('id > 0').first
+    end
+
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
     json = ActiveModelSerializers::SerializableResource.new(InitialStatePresenter.new(state_params), serializer: InitialStateSerializer).to_json
     # rubocop:disable Rails/OutputSafety
     content_tag(:script, json_escape(json).html_safe, id: 'initial-state', type: 'application/json')

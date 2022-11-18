@@ -23,7 +23,11 @@ class Settings::FeaturedTagsController < Settings::BaseController
   end
 
   def destroy
+<<<<<<< HEAD
     @featured_tag.destroy!
+=======
+    RemoveFeaturedTagService.new.call(current_account, @featured_tag)
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
     redirect_to settings_featured_tags_path
   end
 

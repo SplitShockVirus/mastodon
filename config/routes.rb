@@ -4,6 +4,35 @@ require 'sidekiq_unique_jobs/web'
 require 'sidekiq-scheduler/web'
 
 Rails.application.routes.draw do
+<<<<<<< HEAD
+=======
+  # Paths of routes on the web app that to not require to be indexed or
+  # have alternative format representations requiring separate controllers
+  web_app_paths = %w(
+    /getting-started
+    /keyboard-shortcuts
+    /home
+    /public
+    /public/local
+    /conversations
+    /lists/(*any)
+    /notifications
+    /favourites
+    /bookmarks
+    /pinned
+    /start
+    /directory
+    /explore/(*any)
+    /search
+    /publish
+    /follow_requests
+    /blocks
+    /domain_blocks
+    /mutes
+    /statuses/(*any)
+  ).freeze
+
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
   root 'home#index'
 
   mount LetterOpenerWeb::Engine, at: 'letter_opener' if Rails.env.development?
@@ -48,7 +77,7 @@ Rails.application.routes.draw do
     end
   end
 
-  devise_for :users, path: 'auth', controllers: {
+  devise_for :users, path: 'auth', format: false, controllers: {
     omniauth_callbacks: 'auth/omniauth_callbacks',
     sessions:           'auth/sessions',
     registrations:      'auth/registrations',
@@ -57,6 +86,7 @@ Rails.application.routes.draw do
   }
 
   get '/users/:username', to: redirect('/@%{username}'), constraints: lambda { |req| req.format.nil? || req.format.html? }
+  get '/users/:username/statuses/:id', to: redirect('/@%{username}/%{id}'), constraints: lambda { |req| req.format.nil? || req.format.html? }
   get '/authorize_follow', to: redirect { |_, request| "/authorize_interaction?#{request.params.to_query}" }
 
   resources :accounts, path: 'users', only: [:show], param: :username do
@@ -191,8 +221,12 @@ Rails.application.routes.draw do
   resource :relationships, only: [:show, :update]
   resource :statuses_cleanup, controller: :statuses_cleanup, only: [:show, :update]
 
+<<<<<<< HEAD
   get '/public', to: 'public_timelines#show', as: :public_timeline
   get '/media_proxy/:id/(*any)', to: 'media_proxy#show', as: :media_proxy
+=======
+  get '/media_proxy/:id/(*any)', to: 'media_proxy#show', as: :media_proxy, format: false
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
 
   resource :authorize_interaction, only: [:show, :create]
   resource :share, only: [:show, :create]
@@ -237,7 +271,23 @@ Rails.application.routes.draw do
       end
     end
 
+<<<<<<< HEAD
     resource :settings, only: [:edit, :update]
+=======
+    get '/settings', to: redirect('/admin/settings/branding')
+    get '/settings/edit', to: redirect('/admin/settings/branding')
+
+    namespace :settings do
+      resource :branding, only: [:show, :update], controller: 'branding'
+      resource :registrations, only: [:show, :update], controller: 'registrations'
+      resource :content_retention, only: [:show, :update], controller: 'content_retention'
+      resource :about, only: [:show, :update], controller: 'about'
+      resource :appearance, only: [:show, :update], controller: 'appearance'
+      resource :discovery, only: [:show, :update], controller: 'discovery'
+      resource :other, only: [:show, :update], controller: 'other'
+    end
+
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
     resources :site_uploads, only: [:destroy]
 
     resources :invites, only: [:index, :create, :destroy] do
@@ -387,7 +437,7 @@ Rails.application.routes.draw do
 
   get '/admin', to: redirect('/admin/dashboard', status: 302)
 
-  namespace :api do
+  namespace :api, format: false do
     # OEmbed
     get '/oembed', to: 'oembed#show', as: :oembed
 
@@ -477,17 +527,9 @@ Rails.application.routes.draw do
       resources :bookmarks,    only: [:index]
       resources :reports,      only: [:create]
       resources :trends,       only: [:index], controller: 'trends/tags'
-      resources :filters,      only: [:index, :create, :show, :update, :destroy] do
-        resources :keywords, only: [:index, :create], controller: 'filters/keywords'
-        resources :statuses, only: [:index, :create], controller: 'filters/statuses'
-      end
+      resources :filters,      only: [:index, :create, :show, :update, :destroy]
       resources :endorsements, only: [:index]
       resources :markers,      only: [:index, :create]
-
-      namespace :filters do
-        resources :keywords, only: [:show, :update, :destroy]
-        resources :statuses, only: [:show, :destroy]
-      end
 
       namespace :apps do
         get :verify_credentials, to: 'credentials#show'
@@ -643,8 +685,16 @@ Rails.application.routes.draw do
 
       resources :media,       only: [:create]
       resources :suggestions, only: [:index]
-      resources :filters,     only: [:index, :create, :show, :update, :destroy]
       resource  :instance,    only: [:show]
+      resources :filters,     only: [:index, :create, :show, :update, :destroy] do
+        resources :keywords, only: [:index, :create], controller: 'filters/keywords'
+        resources :statuses, only: [:index, :create], controller: 'filters/statuses'
+      end
+
+      namespace :filters do
+        resources :keywords, only: [:show, :update, :destroy]
+        resources :statuses, only: [:show, :destroy]
+      end
 
       namespace :admin do
         resources :accounts, only: [:index]
@@ -664,8 +714,14 @@ Rails.application.routes.draw do
 
   get '/web/(*any)', to: 'home#index', as: :web
 
+<<<<<<< HEAD
   get '/about',        to: 'about#show'
   get '/about/more',   to: 'about#more'
+=======
+  get '/web/(*any)', to: redirect('/%{any}', status: 302), as: :web, defaults: { any: '' }, format: false
+  get '/about',      to: 'about#show'
+  get '/about/more', to: redirect('/about')
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
 
   get '/privacy-policy', to: 'privacy#show', as: :privacy_policy
   get '/terms',          to: redirect('/privacy-policy')

@@ -53,6 +53,19 @@ const mapDispatchToProps = (dispatch, { intl }) => ({
       } else {
         dispatch(unfollowAccount(account.get('id')));
       }
+<<<<<<< HEAD
+=======
+    } else if (account.getIn(['relationship', 'requested'])) {
+      if (unfollowModal) {
+        dispatch(openModal('CONFIRM', {
+          message: <FormattedMessage id='confirmations.cancel_follow_request.message' defaultMessage='Are you sure you want to withdraw your request to follow {name}?' values={{ name: <strong>@{account.get('acct')}</strong> }} />,
+          confirm: intl.formatMessage(messages.cancelFollowRequestConfirm),
+          onConfirm: () => dispatch(unfollowAccount(account.get('id'))),
+        }));
+      } else {
+        dispatch(unfollowAccount(account.get('id')));
+      }
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
     } else {
       dispatch(followAccount(account.get('id')));
     }
@@ -147,6 +160,13 @@ const mapDispatchToProps = (dispatch, { intl }) => ({
   onChangeLanguages (account) {
     dispatch(openModal('SUBSCRIBED_LANGUAGES', {
       accountId: account.get('id'),
+    }));
+  },
+
+  onOpenAvatar (account) {
+    dispatch(openModal('IMAGE', {
+      src: account.get('avatar'),
+      alt: account.get('acct'),
     }));
   },
 

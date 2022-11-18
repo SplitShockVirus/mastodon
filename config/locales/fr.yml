@@ -236,6 +236,7 @@ fr:
         confirm_user: Confirmer l’utilisateur
         create_account_warning: Créer une alerte
         create_announcement: Créer une annonce
+        create_canonical_email_block: Créer un blocage de domaine de courriel
         create_custom_emoji: Créer des émojis personnalisés
         create_domain_allow: Créer un domaine autorisé
         create_domain_block: Créer un blocage de domaine
@@ -244,6 +245,7 @@ fr:
         create_unavailable_domain: Créer un domaine indisponible
         demote_user: Rétrograder l’utilisateur·ice
         destroy_announcement: Supprimer l’annonce
+        destroy_canonical_email_block: Supprimer le blocage de domaine de courriel
         destroy_custom_emoji: Supprimer des émojis personnalisés
         destroy_domain_allow: Supprimer le domaine autorisé
         destroy_domain_block: Supprimer le blocage de domaine
@@ -265,6 +267,7 @@ fr:
         reject_user: Rejeter l’utilisateur
         remove_avatar_user: Supprimer l’avatar
         reopen_report: Rouvrir le signalement
+        resend_user: Renvoyer l'e-mail de confirmation
         reset_password_user: Réinitialiser le mot de passe
         resolve_report: Résoudre le signalement
         sensitive_account: Marquer les médias de votre compte comme sensibles
@@ -295,6 +298,8 @@ fr:
         create_unavailable_domain_html: "%{name} a arrêté la livraison vers le domaine %{target}"
         demote_user_html: "%{name} a rétrogradé l'utilisateur·rice %{target}"
         destroy_announcement_html: "%{name} a supprimé l'annonce %{target}"
+        destroy_canonical_email_block_html: "%{name} a débloqué l'email avec le hash %{target}"
+        destroy_custom_emoji_html: "%{name} a supprimé l'émoji %{target}"
         destroy_domain_allow_html: "%{name} a rejeté la fédération avec le domaine %{target}"
         destroy_domain_block_html: "%{name} a débloqué le domaine %{target}"
         destroy_email_domain_block_html: "%{name} a débloqué le domaine de courriel %{target}"
@@ -302,6 +307,7 @@ fr:
         destroy_ip_block_html: "%{name} a supprimé la règle pour l'IP %{target}"
         destroy_status_html: "%{name} a supprimé le message de %{target}"
         destroy_unavailable_domain_html: "%{name} a repris la livraison au domaine %{target}"
+        destroy_user_role_html: "%{name} a supprimé le rôle %{target}"
         disable_2fa_user_html: "%{name} a désactivé l'authentification à deux facteurs pour l'utilisateur·rice %{target}"
         disable_custom_emoji_html: "%{name} a désactivé l'émoji %{target}"
         disable_sign_in_token_auth_user_html: "%{name} a désactivé l'authentification basée sur les jetons envoyés par courriel pour %{target}"
@@ -315,6 +321,7 @@ fr:
         reject_user_html: "%{name} a rejeté l’inscription de %{target}"
         remove_avatar_user_html: "%{name} a supprimé l'avatar de %{target}"
         reopen_report_html: "%{name} a rouvert le signalement %{target}"
+        resend_user_html: "%{name} a renvoyé l'e-mail de confirmation pour %{target}"
         reset_password_user_html: "%{name} a réinitialisé le mot de passe de l'utilisateur·rice %{target}"
         resolve_report_html: "%{name} a résolu le signalement %{target}"
         sensitive_account_html: "%{name} a marqué le média de %{target} comme sensible"
@@ -328,7 +335,13 @@ fr:
         update_announcement_html: "%{name} a mis à jour l'annonce %{target}"
         update_custom_emoji_html: "%{name} a mis à jour l'émoji %{target}"
         update_domain_block_html: "%{name} a mis à jour le blocage de domaine pour %{target}"
+        update_ip_block_html: "%{name} a modifié la règle pour l'IP %{target}"
         update_status_html: "%{name} a mis à jour le message de %{target}"
+<<<<<<< HEAD
+=======
+        update_user_role_html: "%{name} a changé le rôle %{target}"
+      deleted_account: compte supprimé
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
       empty: Aucun journal trouvé.
       filter_by_action: Filtrer par action
       filter_by_user: Filtrer par utilisateur·ice
@@ -372,6 +385,7 @@ fr:
       listed: Listé
       new:
         title: Ajouter un nouvel émoji personnalisé
+      no_emoji_selected: Aucun émoji n’a été modifié, car aucun n’a été sélectionné
       not_permitted: Vous n’êtes pas autorisé à effectuer cette action
       overwrite: Écraser
       shortcode: Raccourci
@@ -430,9 +444,7 @@ fr:
         create: Créer le blocage
         hint: Le blocage de domaine n’empêchera pas la création de comptes dans la base de données, mais il appliquera automatiquement et rétrospectivement des méthodes de modération spécifiques sur ces comptes.
         severity:
-          desc_html: "<strong>Masquer</strong> rendra les messages des comptes concernés invisibles à ceux qui ne les suivent pas. <strong>Suspendre</strong> supprimera tout le contenu des comptes concernés, les médias, et les données du profil. Utilisez <strong>Aucune</strong> si vous voulez simplement rejeter les fichiers multimédia."
           noop: Aucune
-          silence: Masqué
           suspend: Suspendre
         title: Nouveau blocage de domaine
       obfuscate: Obfusquer le nom de domaine
@@ -652,7 +664,7 @@ fr:
         other: "%{count} utilisateur·rice·s"
       categories:
         administration: Administration
-        devops: Devops
+        devops: DevOps
         invites: Invitations
         moderation: Modération
         special: Spécial
@@ -703,7 +715,7 @@ fr:
         view_audit_log_description: Permet aux utilisateur⋅rice⋅s de voir l'historique des opérations d'administration sur le serveur
         view_dashboard: Voir le tableau de bord
         view_dashboard_description: Permet aux utilisateur⋅rice⋅s d'accéder au tableau de bord et à diverses statistiques
-        view_devops: Devops
+        view_devops: DevOps
         view_devops_description: Permet aux utilisateur⋅rice⋅s d'accéder aux tableaux de bord Sidekiq et pgHero
       title: Rôles
     rules:
@@ -714,6 +726,7 @@ fr:
       empty: Aucune règle de serveur n'a été définie pour l'instant.
       title: Règles du serveur
     settings:
+<<<<<<< HEAD
       activity_api_enabled:
         desc_html: Nombre de messages publiés localement, de comptes actifs et de nouvelles inscriptions regroupés par semaine
         title: Publier des statistiques agrégées sur l’activité des utilisateur·rice·s
@@ -729,6 +742,29 @@ fr:
       default_noindex:
         desc_html: Affecte tous les utilisateurs qui n'ont pas changé eux-mêmes ce paramètre
         title: Opter pour le retrait de l'indexation des moteurs de recherche par défaut
+=======
+      about:
+        manage_rules: Gérer les règles du serveur
+        preamble: Fournissez des informations détaillées sur le fonctionnement, la modération et le financement du serveur.
+        rules_hint: Il y a un espace dédié pour les règles auxquelles vos utilisateurs sont invités à adhérer.
+        title: À propos
+      appearance:
+        preamble: Personnaliser l'interface web de Mastodon.
+        title: Apparence
+      branding:
+        preamble: L'image de marque de votre serveur la différencie des autres serveurs du réseau. Ces informations peuvent être affichées dans nombre d'environnements, tels que l'interface web de Mastodon, les applications natives, dans les aperçus de liens sur d'autres sites Web et dans les applications de messagerie, etc. C'est pourquoi il est préférable de garder ces informations claires, courtes et concises.
+        title: Thème
+      content_retention:
+        preamble: Contrôle comment le contenu créé par les utilisateurs est enregistré et stocké dans Mastodon.
+        title: Rétention du contenu
+      discovery:
+        follow_recommendations: Suivre les recommandations
+        preamble: Faire apparaître un contenu intéressant est essentiel pour interagir avec de nouveaux utilisateurs qui ne connaissent peut-être personne sur Mastodonte. Contrôlez le fonctionnement des différentes fonctionnalités de découverte sur votre serveur.
+        profile_directory: Annuaire des profils
+        public_timelines: Fils publics
+        title: Découverte
+        trends: Tendances
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
       domain_blocks:
         all: À tout le monde
         disabled: À personne
@@ -752,6 +788,7 @@ fr:
         desc_html: Permettre aux utilisateur·ice·s d’être découvert·e·s
         title: Activer l’annuaire des profils
       registrations:
+<<<<<<< HEAD
         closed_message:
           desc_html: Affiché sur la page d’accueil lorsque les inscriptions sont fermées. Vous pouvez utiliser des balises HTML
           title: Message de fermeture des inscriptions
@@ -761,6 +798,10 @@ fr:
         require_invite_text:
           desc_html: Lorsque les enregistrements nécessitent une approbation manuelle, rendre le texte de l’invitation "Pourquoi voulez-vous vous inscrire ?" obligatoire plutôt que facultatif
           title: Exiger que les nouveaux utilisateurs remplissent un texte de demande d’invitation
+=======
+        preamble: Affecte qui peut créer un compte sur votre serveur.
+        title: Inscriptions
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
       registrations_mode:
         modes:
           approved: Approbation requise pour s’inscrire
@@ -800,10 +841,27 @@ fr:
         remove_from_report: Retirer du rapport
         report: Signalement
       deleted: Supprimé
+<<<<<<< HEAD
+=======
+      favourites: Favoris
+      history: Historique de version
+      in_reply_to: Répondre à
+      language: Langue
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
       media:
         title: Médias
+      metadata: Metadonnés
       no_status_selected: Aucun message n’a été modifié car aucun n’a été sélectionné
+      open: Ouvrir le message
+      original_status: Message original
+      reblogs: Partages
+      status_changed: Publication modifiée
       title: Messages du compte
+<<<<<<< HEAD
+=======
+      trending: Tendances
+      visibility: Visibilité
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
       with_media: Avec médias
     strikes:
       actions:
@@ -843,6 +901,9 @@ fr:
         description_html: Ces liens sont actuellement énormément partagés par des comptes dont votre serveur voit les messages. Cela peut aider vos utilisateur⋅rice⋅s à découvrir ce qu'il se passe dans le monde. Aucun lien n'est publiquement affiché tant que vous n'avez pas approuvé le compte qui le publie. Vous pouvez également autoriser ou rejeter les liens individuellement.
         disallow: Interdire le lien
         disallow_provider: Interdire l'éditeur
+        no_link_selected: Aucun lien n'a été changé car aucun n'a été sélectionné
+        publishers:
+          no_publisher_selected: Aucun compte publicateur n'a été changé car aucun n'a été sélectionné
         shared_by_over_week:
           one: Partagé par %{count} personne au cours de la dernière semaine
           other: Partagé par %{count} personnes au cours de la dernière semaine
@@ -862,6 +923,7 @@ fr:
         description_html: Voici les messages dont votre serveur a connaissance qui sont beaucoup partagés et mis en favoris en ce moment. Cela peut aider vos utilisateur⋅rice⋅s, néophytes comme aguerri⋅e⋅s, à trouver plus de comptes à suivre. Aucun message n'est publiquement affiché tant que vous n'en avez pas approuvé l'auteur⋅rice, et seulement si icellui permet que son compte soit suggéré aux autres. Vous pouvez également autoriser ou rejeter les messages individuellement.
         disallow: Proscrire le message
         disallow_account: Proscrire l'auteur·rice
+        no_status_selected: Aucune publication en tendance n'a été changée car aucune n'a été sélectionnée
         not_discoverable: L'auteur⋅rice n'a pas choisi de pouvoir être découvert⋅e
         shared_by:
           one: Partagé ou ajouté aux favoris une fois
@@ -877,6 +939,7 @@ fr:
           tag_uses_measure: utilisations totales
         description_html: Ces hashtags apparaissent actuellement dans de nombreux messages que votre serveur voit. Cela peut aider vos utilisateur⋅rice⋅s à découvrir les sujets dont les gens parlent le plus en ce moment. Aucun hashtag n'est publiquement affiché tant que vous ne l'avez pas approuvé.
         listable: Peut être suggéré
+        no_tag_selected: Aucun tag n'a été changé car aucun n'a été sélectionné
         not_listable: Ne sera pas suggéré
         not_trendable: N'apparaîtra pas sous les tendances
         not_usable: Ne peut être utilisé
@@ -986,7 +1049,10 @@ fr:
     warning: Soyez prudent·e avec ces données. Ne les partagez pas !
     your_token: Votre jeton d’accès
   auth:
+<<<<<<< HEAD
     apply_for_account: Demander une invitation
+=======
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
     change_password: Mot de passe
     checkbox_agreement_html: J’accepte les <a href="%{rules_path}" target="_blank">règles du serveur</a> et les <a href="%{terms_path}" target="_blank">conditions de service</a>
     checkbox_agreement_without_rules_html: J’accepte les <a href="%{terms_path}" target="_blank">conditions d’utilisation</a>
@@ -1015,6 +1081,12 @@ fr:
     registration_closed: "%{instance} a désactivé les inscriptions"
     resend_confirmation: Envoyer à nouveau les consignes de confirmation
     reset_password: Réinitialiser le mot de passe
+<<<<<<< HEAD
+=======
+    rules:
+      preamble: Celles-ci sont définies et appliqués par les modérateurs de %{domain}.
+      title: Quelques règles de base.
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
     security: Sécurité
     set_new_password: Définir le nouveau mot de passe
     setup:
@@ -1171,6 +1243,11 @@ fr:
     edit:
       add_keyword: Ajouter un mot-clé
       keywords: Mots-clés
+<<<<<<< HEAD
+=======
+      statuses: Publications individuelles
+      statuses_hint_html: Ce filtre s'applique à la sélection de messages individuels, qu'ils correspondent ou non aux mots-clés ci-dessous. <a href="%{path}">Revoir ou supprimer des messages du filtre</a>.
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
       title: Éditer le filtre
     errors:
       deprecated_api_multiple_keywords: Ces paramètres ne peuvent pas être modifiés depuis cette application, car ils s'appliquent à plus d'un filtre de mot-clé. Utilisez une application plus récente ou l'interface web.
@@ -1184,10 +1261,29 @@ fr:
       keywords:
         one: "%{count} mot-clé"
         other: "%{count} mots-clés"
+<<<<<<< HEAD
+=======
+      statuses:
+        one: "%{count} message"
+        other: "%{count} messages"
+      statuses_long:
+        one: "%{count} publication individuelle cachée"
+        other: "%{count} publications individuelles cachées"
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
       title: Filtres
     new:
       save: Enregistrer le nouveau filtre
       title: Ajouter un nouveau filtre
+<<<<<<< HEAD
+=======
+    statuses:
+      back_to_filter: Retour au filtre
+      batch:
+        remove: Retirer du filtre
+      index:
+        hint: Ce filtre s'applique à la sélection de messages individuels, indépendamment d'autres critères. Vous pouvez ajouter plus de messages à ce filtre à partir de l'interface Web.
+        title: Messages filtrés
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
   footer:
     developers: Développeurs
     more: Davantage…
@@ -1195,12 +1291,21 @@ fr:
     trending_now: Tendance en ce moment
   generic:
     all: Tous
+    all_items_on_page_selected_html:
+      one: "<strong>%{count}</strong> élément de cette page est sélectionné."
+      other: L'ensemble des <strong>%{count}</strong> éléments de cette page est sélectionné.
+    all_matching_items_selected_html:
+      one: "<strong>%{count}</strong> élément correspondant à votre recherche est sélectionné."
+      other: L'ensemble des <strong>%{count}</strong> éléments correspondant à votre recherche est sélectionné.
     changes_saved_msg: Les modifications ont été enregistrées avec succès !
     copy: Copier
     delete: Supprimer
     none: Aucun
     order_by: Classer par
     save_changes: Enregistrer les modifications
+    select_all_matching_items:
+      one: Sélectionnez %{count} élément correspondant à votre recherche.
+      other: Sélectionnez tous l'ensemble des %{count} éléments correspondant à votre recherche.
     today: aujourd’hui
     validation_errors:
       one: Quelque chose ne va pas ! Veuillez vérifiez l’erreur ci-dessous
@@ -1303,6 +1408,8 @@ fr:
     carry_blocks_over_text: Cet utilisateur que vous aviez bloqué est parti de %{acct}.
     carry_mutes_over_text: Cet utilisateur que vous aviez masqué est parti de %{acct}.
     copy_account_note_text: 'Cet·te utilisateur·rice est parti·e de %{acct}, voici vos notes précédentes à son sujet :'
+  navigation:
+    toggle_menu: Basculer l'affichage du menu
   notification_mailer:
     admin:
       report:
@@ -1459,7 +1566,7 @@ fr:
       adobe_air: Adobe Air
       android: Android
       blackberry: BlackBerry
-      chrome_os: Chrome OS
+      chrome_os: ChromeOS
       firefox_os: Firefox OS
       ios: iOS
       linux: Linux
@@ -1749,10 +1856,17 @@ fr:
         suspend: Compte suspendu
     welcome:
       edit_profile_action: Configuration du profil
+<<<<<<< HEAD
       edit_profile_step: Vous pouvez personnaliser votre profil en téléchargeant un avatar, une image d’en-tête, en changeant votre pseudo et plus encore. Si vous souhaitez examiner les nouveaux·lles abonné·e·s avant qu’iels ne soient autorisé·e·s à vous suivre, vous pouvez verrouiller votre compte.
       explanation: Voici quelques conseils pour vous aider à démarrer
       final_action: Commencez à publier
       final_step: 'Commencez à publier ! Même sans abonné·e·s, vos messages publics peuvent être vus par d’autres, par exemple sur le fil public local et dans les hashtags. Vous pouvez vous présenter sur le hashtag #introductions.'
+=======
+      edit_profile_step: Vous pouvez personnaliser votre profil en téléchargeant une photo de profil, en changant votre nom d'utilisateur, etc. Vous pouvez opter pour le passage en revue de chaque nouvelle demande d'abonnement à chaque fois qu'un utilisateur essaie de s'abonner à votre compte.
+      explanation: Voici quelques conseils pour vous aider à démarrer
+      final_action: Commencez à publier
+      final_step: 'Commencez à publier ! Même si vous n''avez pas encore d''abonnés, vos publications sont publiques et sont accessibles par les autres, par exemple grâce à la zone horaire locale ou par les hashtags. Vous pouvez vous présenter sur le hashtag #introductions.'
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
       full_handle: Votre identifiant complet
       full_handle_hint: C’est ce que vous diriez à vos ami·e·s pour leur permettre de vous envoyer un message ou vous suivre à partir d’un autre serveur.
       review_preferences_action: Modifier les préférences

@@ -103,7 +103,7 @@ class ToggleOption extends ImmutablePureComponent {
       <React.Fragment>
         <Toggle checked={checked} onChange={this.handleChange} />
 
-        <div className='content'>
+        <div className='privacy-dropdown__option__content'>
           <strong>{text}</strong>
           {meta}
         </div>
@@ -228,7 +228,7 @@ class ComposerOptions extends ImmutablePureComponent {
 
     //  The result.
     return (
-      <div className='composer--options'>
+      <div className='compose-form__buttons'>
         <input
           accept={acceptContentTypes}
           disabled={disabled || !allowMedia}
@@ -309,7 +309,6 @@ class ComposerOptions extends ImmutablePureComponent {
         )}
         <LanguageDropdown />
         <Dropdown
-          active={advancedOptions && advancedOptions.some(value => !!value)}
           disabled={disabled || isEditing}
           icon='ellipsis-h'
           items={advancedOptions ? [

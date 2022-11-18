@@ -20,6 +20,7 @@ class AccountsController < ApplicationController
         use_pack 'public'
         expires_in 0, public: true unless user_signed_in?
 
+<<<<<<< HEAD
         @pinned_statuses   = []
         @endorsed_accounts = @account.endorsed_accounts.to_a.sample(4)
         @featured_hashtags = @account.featured_tags.order(statuses_count: :desc)
@@ -37,6 +38,9 @@ class AccountsController < ApplicationController
           @older_url = older_url if @statuses.last.id > filtered_statuses.last.id
           @newer_url = newer_url if @statuses.first.id < filtered_statuses.first.id
         end
+=======
+        @rss_url = rss_url
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
       end
 
       format.rss do

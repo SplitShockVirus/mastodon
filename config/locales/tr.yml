@@ -271,6 +271,7 @@ tr:
         reject_user: Kullanıcıyı Reddet
         remove_avatar_user: Profil Resmini Kaldır
         reopen_report: Şikayeti Tekrar Aç
+        resend_user: Doğrulama E-postasını Tekrar Gönder
         reset_password_user: Parolayı Sıfırla
         resolve_report: Şikayeti Çöz
         sensitive_account: Hesabınızdaki medyayı hassas olarak işaretleyin
@@ -329,6 +330,7 @@ tr:
         reject_user_html: "%{name}, %{target} konumundan kaydı reddetti"
         remove_avatar_user_html: "%{name}, %{target} kullanıcısının avatarını kaldırdı"
         reopen_report_html: "%{name}, %{target} şikayetini yeniden açtı"
+        resend_user_html: "%{name}, %{target} için doğrulama e-postasını tekrar gönderdi"
         reset_password_user_html: "%{name}, %{target} kullanıcısının parolasını sıfırladı"
         resolve_report_html: "%{name}, %{target} şikayetini çözdü"
         sensitive_account_html: "%{name}, %{target} kullanıcısının medyasını hassas olarak işaretledi"
@@ -345,6 +347,7 @@ tr:
         update_ip_block_html: "%{name}, %{target} IP adresi için kuralı güncelledi"
         update_status_html: "%{name}, %{target} kullanıcısının gönderisini güncelledi"
         update_user_role_html: "%{name}, %{target} rolünü değiştirdi"
+      deleted_account: hesap silindi
       empty: Kayıt bulunamadı.
       filter_by_action: Eyleme göre filtre
       filter_by_user: Kullanıcıya göre filtre
@@ -446,9 +449,7 @@ tr:
         create: Yeni blok oluştur
         hint: Domain bloğu, veri tabanında hesap kayıtlarının oluşturulmasını engellemez, fakat o hesapların üzerine otomatik olarak belirli yönetim metodlarını olarak uygular.
         severity:
-          desc_html: "<strong>Susturma</strong>, uygulanan hesabın gönderilerini, o hesabı takip etmeyen diğer herkese gizler. <strong>Uzaklaştırma</strong> hesabın bütün içeriğini, medya dosyalarını ve profil verisini siler. Sadece medya dosyalarını reddetmek için <strong>Hiçbiri</strong> kullanın."
           noop: Yok
-          silence: Sustur
           suspend: Uzaklaştır
         title: Yeni domain bloğu
       obfuscate: Alan adını gizle
@@ -668,7 +669,7 @@ tr:
         other: "%{count} kullanıcı"
       categories:
         administration: Yönetim
-        devops: Devops
+        devops: DevOps
         invites: Davetler
         moderation: Denetim
         special: Özel
@@ -719,7 +720,7 @@ tr:
         view_audit_log_description: Kullanıcıların sunucudaki yönetsel eylemlerin bir tarihçesini görüntülemesine izin verir
         view_dashboard: Ana Paneli Görüntüleme
         view_dashboard_description: Kullanıcıların ana panele ve çeşitli ölçütlere erişmesine izin verir
-        view_devops: Devops
+        view_devops: DevOps
         view_devops_description: Kullanıcıların Sidekiq ve pgHero panellerine erişmesine izin verir
       title: Roller
     rules:
@@ -1008,7 +1009,10 @@ tr:
     warning: Bu verilere çok dikkat edin. Asla kimseyle paylaşmayın!
     your_token: Erişim belirteciniz
   auth:
+<<<<<<< HEAD
     apply_for_account: Davet et
+=======
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
     change_password: Parola
     checkbox_agreement_html: <a href="%{rules_path}" target="_blank">Sunucu kurallarını</a> ve <a href="%{terms_path}" target="_blank">hizmet şartlarını</a> kabul ediyorum
     checkbox_agreement_without_rules_html: <a href="%{terms_path}" target="_blank">Hizmet şartlarını</a> kabul ediyorum
@@ -1350,6 +1354,8 @@ tr:
     carry_blocks_over_text: Bu kullanıcı engellediğiniz %{acct} adresinden taşındı.
     carry_mutes_over_text: Bu kullanıcı sessize aldığınız %{acct} adresinden taşındı.
     copy_account_note_text: 'Bu kullanıcı %{acct} adresinden taşındı, işte onlarla ilgili önceki notlarınız:'
+  navigation:
+    toggle_menu: Menüyü aç/kapa
   notification_mailer:
     admin:
       report:
@@ -1482,7 +1488,7 @@ tr:
     browser: Tarayıcı
     browsers:
       alipay: Alipay
-      blackberry: Blackberry
+      blackberry: BlackBerry
       chrome: Chrome
       edge: Microsoft Edge
       electron: Electron
@@ -1505,7 +1511,7 @@ tr:
     platforms:
       adobe_air: Adobe Air
       android: Android
-      blackberry: Blackberry
+      blackberry: BlackBerry
       chrome_os: ChromeOS
       firefox_os: Firefox OS
       ios: iOS

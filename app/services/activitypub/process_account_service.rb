@@ -39,7 +39,12 @@ class ActivityPub::ProcessAccountService < BaseService
 
     unless @options[:only_key] || @account.suspended?
       check_featured_collection! if @account.featured_collection_url.present?
+<<<<<<< HEAD
       check_links! unless @account.fields.empty?
+=======
+      check_featured_tags_collection! if @json['featuredTags'].present?
+      check_links! if @account.fields.any?(&:requires_verification?)
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
     end
 
     @account

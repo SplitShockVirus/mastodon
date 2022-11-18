@@ -16,7 +16,11 @@ import ConfirmationModal from './confirmation_modal';
 import SubscribedLanguagesModal from 'flavours/glitch/features/subscribed_languages_modal';
 import FocalPointModal from './focal_point_modal';
 import DeprecatedSettingsModal from './deprecated_settings_modal';
+<<<<<<< HEAD
 import InteractionModal from 'flavours/glitch/features/interaction_modal';
+=======
+import ImageModal from './image_modal';
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
 import {
   OnboardingModal,
   MuteModal,
@@ -36,6 +40,7 @@ const MODAL_COMPONENTS = {
   'ONBOARDING': OnboardingModal,
   'VIDEO': () => Promise.resolve({ default: VideoModal }),
   'AUDIO': () => Promise.resolve({ default: AudioModal }),
+  'IMAGE': () => Promise.resolve({ default: ImageModal }),
   'BOOST': () => Promise.resolve({ default: BoostModal }),
   'FAVOURITE': () => Promise.resolve({ default: FavouriteModal }),
   'DOODLE': () => Promise.resolve({ default: DoodleModal }),

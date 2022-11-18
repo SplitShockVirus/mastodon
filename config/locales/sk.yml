@@ -21,6 +21,7 @@ sk:
     federation_hint_html: S účtom na %{instance} budeš môcť následovať ľúdí na hociakom Mastodon serveri, ale aj na iných serveroch.
     get_apps: Vyskúšaj aplikácie
     hosted_on: Mastodon hostovaný na %{domain}
+<<<<<<< HEAD
     instance_actor_flash: |
       Tento účet je virtuálnym aktérom, ktorý predstavuje samotný server a nie žiadného jedného užívateľa.
       Je využívaný pre potreby federovania a nemal by byť blokovaný, pokiaľ nechceš zablokovať celý server, čo ide lepšie dosiahnúť cez blokovanie domény.
@@ -60,13 +61,22 @@ sk:
     endorsements_hint: Môžeš ukázať sledovaných užívateľov, s ktorými si spriaznený/á cez webové rozhranie, a tí tu budú zobrazení.
     featured_tags_hint: Môžeš zvýrazniť určité haštagy, ktoré tu budú zobrazené.
     follow: Následuj
+=======
+    title: O
+  accounts:
+    follow: Nasleduj
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
     followers:
       few: Sledovateľov
       many: Sledovateľov
       one: Sledujúci
       other: Sledovatelia
+<<<<<<< HEAD
     following: Následujem
     joined: Pridal/a sa v %{date}
+=======
+    following: Nasledujem
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
     last_active: naposledy aktívny
     link_verified_on: Vlastníctvo tohto odkazu bolo skontrolované %{date}
     media: Médiá
@@ -330,9 +340,7 @@ sk:
         create: Vytvor blokovanie domény
         hint: Blokovanie domény stále dovolí vytvárať nové účty v databázi, ale tieto budú spätne automaticky moderované.
         severity:
-          desc_html: "<strong>Stíšenie</strong> urobí všetky príspevky daného účtu neviditeľné pre všetkých ktorí nenásledujú tento účet. <strong>Vylúčenie</strong> zmaže všetky príspevky, médiá a profilové informácie. Použi <strong>Žiadne</strong>, ak chceš iba neprijímať súbory médií."
           noop: Nič
-          silence: Stíš
           suspend: Vylúč
         title: Nové blokovanie domény
       obfuscate: Zatemniť názov domény
@@ -665,6 +673,7 @@ sk:
     didnt_get_confirmation: Neobdržal/a si kroky na potvrdenie?
     forgot_password: Zabudnuté heslo?
     invalid_reset_password_token: Token na obnovu hesla vypršal. Prosím vypítaj si nový.
+    log_in_with: Prihlás sa s
     login: Prihlás sa
     logout: Odhlás sa
     migrate_account: Presúvam sa na iný účet
@@ -688,7 +697,7 @@ sk:
     trouble_logging_in: Problém s prihlásením?
     use_security_key: Použi bezpečnostný kľúč
   authorize_follow:
-    already_following: Tento účet už následuješ
+    already_following: Tento účet už nasleduješ
     error: Naneštastie nastala chyba pri hľadaní vzdialeného účtu
     follow: Nasleduj
     follow_request: 'Poslal/a si žiadosť následovať užívateľa:'
@@ -697,7 +706,7 @@ sk:
       close: Alebo môžeš iba zatvoriť toto okno.
       return: Ukáž užívateľov profil
       web: Prejdi do siete
-    title: Následuj %{acct}
+    title: Nasleduj %{acct}
   challenge:
     confirm: Pokračuj
     hint_html: "<strong>Tip:</strong> Hodinu nebudeme znovu vyžadovať tvoje heslo."
@@ -1000,7 +1009,6 @@ sk:
     activity: Najnovšia aktivita
     browser: Prehliadač
     browsers:
-      blackberry: RIM Blackberry
       chrome: Google Chrome
       firefox: Mozilla Firefox
       generic: Neznámy prehliadač
@@ -1014,7 +1022,6 @@ sk:
     explanation: Tieto sú prehliadače ktoré sú teraz prihlásené na tvoj Mastodon účet.
     ip: IP adresa
     platforms:
-      chrome_os: Google ChromeOS
       ios: Apple iOS
       linux: GNU/Linux
       mac: MacOSX

@@ -4,7 +4,7 @@ import { Sparklines, SparklinesCurve } from 'react-sparklines';
 import { FormattedMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import ImmutablePropTypes from 'react-immutable-proptypes';
-import Permalink from './permalink';
+import { Link } from 'react-router-dom';
 import ShortNumber from 'mastodon/components/short_number';
 import Skeleton from 'mastodon/components/skeleton';
 import classNames from 'classnames';
@@ -53,7 +53,6 @@ export const accountsCountRenderer = (displayNumber, pluralReady) => (
 export const ImmutableHashtag = ({ hashtag }) => (
   <Hashtag
     name={hashtag.get('name')}
-    href={hashtag.get('url')}
     to={`/tags/${hashtag.get('name')}`}
     people={hashtag.getIn(['history', 0, 'accounts']) * 1 + hashtag.getIn(['history', 1, 'accounts']) * 1}
     uses={hashtag.getIn(['history', 0, 'uses']) * 1 + hashtag.getIn(['history', 1, 'uses']) * 1}
@@ -65,12 +64,16 @@ ImmutableHashtag.propTypes = {
   hashtag: ImmutablePropTypes.map.isRequired,
 };
 
+<<<<<<< HEAD
 const Hashtag = ({ name, href, to, people, history, className }) => (
+=======
+const Hashtag = ({ name, to, people, uses, history, className, description, withGraph }) => (
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
   <div className={classNames('trends__item', className)}>
     <div className='trends__item__name'>
-      <Permalink href={href} to={to}>
+      <Link to={to}>
         {name ? <React.Fragment>#<span>{name}</span></React.Fragment> : <Skeleton width={50} />}
-      </Permalink>
+      </Link>
 
       {typeof people !== 'undefined' ? <ShortNumber value={people} renderer={accountsCountRenderer} /> : <Skeleton width={100} />}
     </div>
@@ -87,7 +90,6 @@ const Hashtag = ({ name, href, to, people, history, className }) => (
 
 Hashtag.propTypes = {
   name: PropTypes.string,
-  href: PropTypes.string,
   to: PropTypes.string,
   people: PropTypes.number,
   uses: PropTypes.number,

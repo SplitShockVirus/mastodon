@@ -4,8 +4,13 @@ import { throttle } from 'lodash';
 import { search as emojiSearch } from '../features/emoji/emoji_mart_search_light';
 import { tagHistory } from '../settings';
 import { useEmoji } from './emojis';
+<<<<<<< HEAD
 import resizeImage from '../utils/resize_image';
 import { importFetchedAccounts } from './importer';
+=======
+import { importFetchedAccounts, importFetchedStatus } from './importer';
+import { openModal } from './modal';
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
 import { updateTimeline } from './timelines';
 import { showAlertForError } from './alerts';
 import { showAlert } from './alerts';
@@ -191,6 +196,10 @@ export function submitCompose(routerHistory) {
           dispatch(updateTimeline(timelineId, { ...response.data }));
         }
       };
+
+      if (statusId) {
+        dispatch(importFetchedStatus({ ...response.data }));
+      }
 
       if (statusId === null && response.data.visibility !== 'direct') {
         insertIfOnline('home');

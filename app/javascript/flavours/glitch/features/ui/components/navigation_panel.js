@@ -1,9 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+<<<<<<< HEAD
 import { NavLink, Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
 import Icon from 'flavours/glitch/components/icon';
 import { showTrends } from 'flavours/glitch/initial_state';
+=======
+import { defineMessages, injectIntl } from 'react-intl';
+import { Link } from 'react-router-dom';
+import { timelinePreview, showTrends } from 'flavours/glitch/initial_state';
+import ColumnLink from 'flavours/glitch/features/ui/components/column_link';
+import DisabledAccountBanner from './disabled_account_banner';
+import FollowRequestsColumnLink from './follow_requests_column_link';
+import ListPanel from './list_panel';
+import NotificationsCounterIcon from './notifications_counter_icon';
+import SignInBanner from './sign_in_banner';
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
 import { preferencesLink, relationshipsLink } from 'flavours/glitch/utils/backend_links';
 import NotificationsCounterIcon from './notifications_counter_icon';
 import FollowRequestsNavLink from './follow_requests_nav_link';
@@ -23,8 +35,13 @@ export default class NavigationPanel extends React.Component {
   };
 
   render() {
+<<<<<<< HEAD
     const { signedIn } = this.context.identity;
     const { onOpenSettings } = this.props;
+=======
+    const { intl, onOpenSettings } = this.props;
+    const { signedIn, disabledAccountId } = this.context.identity;
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
 
     return (
       <div className='navigation-panel'>
@@ -44,8 +61,13 @@ export default class NavigationPanel extends React.Component {
         {!signedIn && (
           <React.Fragment>
             <hr />
+<<<<<<< HEAD
             <SignInBanner />
           </React.Fragment>
+=======
+            { disabledAccountId ? <DisabledAccountBanner /> : <SignInBanner /> }
+          </div>
+>>>>>>> e0e7a09cfed2b311f055522eea45caac0838d87a
         )}
 
         {signedIn && (

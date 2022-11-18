@@ -31,7 +31,7 @@ class Trends::StatusFilter
     when 'trending'
       trending_scope(value)
     else
-      raise "Unknown filter: #{key}"
+      raise Mastodon::InvalidParameterError, "Unknown filter: #{key}"
     end
   end
 
